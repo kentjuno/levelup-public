@@ -1,0 +1,9 @@
+This folder is for sound files.
+
+The application currently expects the following files:
+- level-up.mp3
+- hit.mp3
+- boss-hurt.mp3
+- task-complete.mp3
+
+Please upload your sound files with these exact names here.

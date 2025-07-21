@@ -1,0 +1,14 @@
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow anyone to read boss images for display in the app.
+    match /boss-images/{imageName} {
+      allow read;
+      // Allow any authenticated user to write.
+      // The UI for the boss generator is already restricted to admins,
+      // so this rule prevents access only from unauthenticated users.
+      allow write: if request.auth != null;
+    }
+  }
+}
